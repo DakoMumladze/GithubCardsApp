@@ -1,2 +1,0 @@
-# GithubCardsApp
-React test project
