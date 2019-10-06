@@ -15,10 +15,14 @@ const CardList = (props) => (
 );
 
 class Form extends React.Component {
+  state = {userName: ''}
+  handleSubmit = (event) => {
+    event.preventDefault();
+  };
   render() {
     return (
-      <form action="">
-        <input type="text" placeholder="Github username" />
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" placeholder="Github username" value={this.state.userName} onChange={event => this.setState({userName: event.target.value})}/>
         <button>Add Card</button>
       </form>
     );
